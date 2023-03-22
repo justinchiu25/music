@@ -83,3 +83,30 @@ input[type="range"] {
   text-align: center;
   width: 100%;
 }
+
+.sidebar {
+  height: 100%;
+  position: fixed;
+  width: 10%;
+  margin:auto;
+}
+
+.music-table {
+  padding-left: 10%;
+}
+.music-container th, .music-container td {
+  width: 80px;
+  text-align: center;
+  border: 1px solid #E0E0E0;
+}
+.music-container th:first-child, .music-container td:first-child {
+  width: 120px;
+}
+.music-container thead {
+  display: block;
+}
+.music-container tbody {
+  display: block;
+  height: 100px;
+  overflow: auto;
+}

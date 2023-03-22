@@ -3,7 +3,7 @@ import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 import { IconContext } from "react-icons";
 
-export default function Homepage() {
+export default function Player() {
 
     const [isPlaying, setIsPlaying] = useState(false);
 
