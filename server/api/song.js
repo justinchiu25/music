@@ -26,14 +26,4 @@ router.get("/:id", async (req,res,next) => {
     }
 })
 
-router.put("/:id", async (req,res,next) => {
-    let songId = req.params.id;
-    try {
-        const song = await Song.findByPk(songId);
-        res.send(await song.update({artist: "Test"}))
-    } catch (err) {
-        next(err);
-    }
-})
-
 module.exports = router;
