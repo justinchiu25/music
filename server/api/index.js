@@ -1,5 +1,8 @@
 const router = require("express").Router();
+const cors = require("cors");
 module.exports = router;
+
+router.use(cors());
 
 router.use("/user", require("./user"));
 router.use("/song", require("./song"));

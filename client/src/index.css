@@ -93,6 +93,7 @@ input[type="range"] {
 
 .music-table {
   padding-left: 10%;
+  text-align: center;
 }
 .music-container th, .music-container td {
   width: 80px;
@@ -109,4 +110,12 @@ input[type="range"] {
   display: block;
   height: 100px;
   overflow: auto;
+}
+
+.music-row:hover {
+  background: gray !important;
+}
+
+.player-now-playing {
+  text-align: left;
 }

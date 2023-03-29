@@ -27,7 +27,7 @@ router.put("/:id", async (req,res,next) => {
     let userId = req.params.id;
     try {
         const user = await User.findByPk(userId);
-        res.send(await user.update({about: "hello"}))
+        res.send(await user.update({about: "hello"}));
     } catch (err) {
         next(err);
     }

@@ -6,8 +6,16 @@ const {
 
 // api/song
 router.get("/", async (req,res,next) => {
-    console.log("song page")
-    res.send("song page");
+    try {
+        const data = await Song.findAll({
+    
+            offset: 0,
+            limit: 25
+        })
+        res.status(200).send(data);
+    } catch (err) {
+        next(err);
+    }
 })
 
 //Grabs song info
@@ -21,16 +29,6 @@ router.get("/:id", async (req,res,next) => {
             }
         })
         res.status(200).send(songInfo);
-    } catch (err) {
-        next(err);
-    }
-})
-
-router.put("/:id", async (req,res,next) => {
-    let songId = req.params.id;
-    try {
-        const song = await Song.findByPk(songId);
-        res.send(await song.update({artist: "Test"}))
     } catch (err) {
         next(err);
     }
