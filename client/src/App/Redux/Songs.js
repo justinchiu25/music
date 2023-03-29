@@ -16,7 +16,6 @@ export const setSongs = () => {
         //get from backend server localhost api/song/:id\
         try {
             const { data } = await axios.get(`http://localhost:4000/api/song`);
-            console.log(data);
             dispatch(_setSongs(data));
         } catch (error) {
             console.error(error);

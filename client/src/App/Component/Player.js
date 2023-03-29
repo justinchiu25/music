@@ -19,6 +19,7 @@ export default function Player() {
     return (
           <div>
             <div className='player'>
+                <div className='player-now-playing'> Now Playing </div>
                 <button className="playButton">
                 <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
                     <BiSkipPrevious />

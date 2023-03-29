@@ -111,3 +111,11 @@ input[type="range"] {
   height: 100px;
   overflow: auto;
 }
+
+.music-row:hover {
+  background: gray !important;
+}
+
+.player-now-playing {
+  text-align: left;
+}

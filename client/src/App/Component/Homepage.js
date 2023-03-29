@@ -2,7 +2,6 @@ import react, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSongs } from '../Redux/Songs';
 import Song from './Song';
-//Redux for songs
 
 
 export default function Homepage() {

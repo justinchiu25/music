@@ -6,8 +6,16 @@ const {
 
 // api/song
 router.get("/", async (req,res,next) => {
-    console.log("song page")
-    res.send("song page");
+    try {
+        const data = await Song.findAll({
+    
+            offset: 0,
+            limit: 25
+        })
+        res.status(200).send(data);
+    } catch (err) {
+        next(err);
+    }
 })
 
 //Grabs song info
