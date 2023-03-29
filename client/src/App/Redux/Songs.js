@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const initialState = {};
+const initialState = [];
 
 const SET_SONGS = "SET_SONGS";
 
@@ -11,12 +11,12 @@ const _setSongs = (songs) => {
     }
 }
 
-export const setSongs = (songId) => {
+export const setSongs = () => {
     return async (dispatch) => {
         //get from backend server localhost api/song/:id\
         try {
-            console.log("Hello");
-            const { data } = await axios.get(`http://localhost:4000/api/song/${songId}`);
+            const { data } = await axios.get(`http://localhost:4000/api/song`);
+            console.log(data);
             dispatch(_setSongs(data));
         } catch (error) {
             console.error(error);

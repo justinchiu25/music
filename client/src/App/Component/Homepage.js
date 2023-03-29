@@ -1,6 +1,7 @@
 import react, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSongs } from '../Redux/Songs';
+import Song from './Song';
 //Redux for songs
 
 
@@ -10,7 +11,7 @@ export default function Homepage() {
 
     useEffect( () => {
         //setSongs to something?
-        dispatch(setSongs(1));
+        dispatch(setSongs(2));
     }, [dispatch])
     return (
         <div className='music-table'>
@@ -19,9 +20,14 @@ export default function Homepage() {
             <table className='music-container'>
                 <thead>
                     <tr>
-                        <th> {songs.title} </th>
-                        <th> {songs.artist} </th>
+                        <th> Song </th>
+                        <th> Artist </th>
                     </tr>
+                </thead>
+                <thead>
+                        {songs.map((element, index) => {
+                            return <Song key={index} data={element} />
+                        })}
                 </thead>
             </table>
             <img src={songs.image} />
